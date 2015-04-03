@@ -40,15 +40,10 @@ int main(){
   float divide;
   printf("input your two number\n");
   scanf("%d %d",&a,&b);
-  val=Plus(a,b);
-  printf("%d\n",val);
-  val=Minus(a,b);
-  printf("%d\n",val);
-  val=mult(a,b);
-  printf("%d\n",val);
-  divide=div(a,b);
-  printf("%f\n",divide);
-  val=nameozi(a,b);
-  printf("%d\n",val);
+  printf("%d\n",Plus(a,b));
+  printf("%d\n",Minus(a,b));
+  printf("%d\n",mult(a,b));
+  printf("%f\n",div(a,b));
+  printf("%d\n",nameozi(a,b));
   return 0;
 }
