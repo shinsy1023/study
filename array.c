@@ -6,27 +6,28 @@ typedef struct _node{
   struct _node *next;
 }node;
 
-void add(node *head,int b){
+void add(node *a,int b){
   node *tmp;
   tmp = (node*)malloc(sizeof(node));
   tmp->num=b;
-  head -> next = tmp;
+  a -> next = tmp;
 
 }
 
 int main(){
   int a;
   node *head;
-  while(1){
+  for(a=1;a<10;a++){
     if(head==NULL){
       head=(node*)malloc(sizeof(node));
       head->num=1;
       head->next=NULL;
+      add(head,3);
     }
     else{
-      while(1){
-	add(next,7);
-	printf("%d",head->num);
+      for(a=1;a<10;a++){
+	add(head->next,7);
+	printf("%d\n",head->num);
       }
     }
   }
