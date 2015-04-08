@@ -24,6 +24,11 @@ int main(){
       head->next=NULL;
     }
     else{
-      while(
+      while(1){
+	add(next,7);
+	printf("%d",head->num);
+      }
+    }
+  }
   return 0;
 }
