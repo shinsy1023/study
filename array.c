@@ -15,8 +15,15 @@ void add(node *head,int b){
 }
 
 int main(){
+  int a;
   node *head;
-  while(head==NULL){
-    
+  while(1){
+    if(head==NULL){
+      head=(node*)malloc(sizeof(node));
+      head->num=1;
+      head->next=NULL;
+    }
+    else{
+      while(
   return 0;
 }
