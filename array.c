@@ -7,29 +7,32 @@ typedef struct _node{
 }node;
 
 void add(node *a,int b){
-  node *tmp;
-  tmp = (node*)malloc(sizeof(node));
-  tmp->num=b;
-  a -> next = tmp;
+  if(head==NULL){
+    head->num=b;
+
+  }
+  else if(a->num==NULL){
+    node *tmp;
+    tmp=(node*)malloc(sizeof(node));
+    tmp->num=b;
+    a -> next = tmp;
+  }
+  else{
+
 
 }
 
 int main(){
   int a;
   node *head;
-  for(a=1;a<10;a++){
-    if(head==NULL){
-      head=(node*)malloc(sizeof(node));
-      head->num=1;
-      head->next=NULL;
-      add(head,3);
-    }
-    else{
-      for(a=1;a<10;a++){
-	add(head->next,7);
-	printf("%d\n",head->num);
-      }
-    }
+  int* point;
+  head=(node*)malloc(sizeof(node));
+  for(a=0;a<10;a++){
+    add(head,1);
+    head->num=point;
+
   }
+
+
   return 0;
 }
