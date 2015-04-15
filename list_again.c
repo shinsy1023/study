@@ -6,20 +6,18 @@ typedef struct _node{
   struct _node *next;
 }node;
 
-void add(node *head,int b){
+void add(node *head,int insert){
   node *tmp;
   tmp=(node*)malloc(sizeof(node));
-  tmp->num=b;
+  tmp->num=insert;
   head->next=tmp;
 }
 
 int main(){
-  node *head;
-  while (1){
-    if(head==NULL){
-      head->num=1;
-
-
-  }
+  node *head=(node*)malloc(sizeof(node));
+  head=NULL;
+  head->num=4;
+  add(head,7);
+  printf("%d\n",head->next->num);
   return 0;
 }
