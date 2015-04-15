@@ -7,17 +7,20 @@ typedef struct _node{
 }node;
 
 void add(node *head,int insert){
-  node *tmp;
-  tmp=(node*)malloc(sizeof(node));
+  node *tmp=(node*)malloc(sizeof(node));
   tmp->num=insert;
   head->next=tmp;
 }
 
 int main(){
   node *head=(node*)malloc(sizeof(node));
-  head=NULL;
-  head->num=4;
-  add(head,7);
-  printf("%d\n",head->next->num);
+  int insert;
+  printf("Input your head number.\n");
+  scanf("%d",&insert);
+  head->num=insert;
+  printf("Input your number.\n");
+  scanf("%d",&insert);
+  add(head,insert);
+  printf("%d%d\n",head->num,head->next->num);
   return 0;
 }
